@@ -15,153 +15,88 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #08090d;
+            background: #080b12;
             color: white;
         }
 
-        /* NAVBAR */
-        nav {
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 7%;
-            background: #0d0f15;
-            border-bottom: 1px solid #1d2029;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        .logo span {
-            color: #7c5cff;
-        }
-
-        nav a {
-            color: #aaa;
-            text-decoration: none;
-            margin-left: 25px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: white;
-        }
-
-        /* HERO */
-        .hero {
-            min-height: 430px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        header {
             text-align: center;
-            padding: 50px 20px;
-            background:
-                radial-gradient(circle at top, #22203b 0%, #08090d 55%);
+            padding: 55px 20px;
+            background: linear-gradient(135deg, #111827, #090d16);
+            border-bottom: 1px solid #202838;
         }
 
-        .hero h1 {
-            font-size: clamp(40px, 7vw, 75px);
-            margin-bottom: 15px;
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 12px;
+            color: #8b5cf6;
         }
 
-        .hero h1 span {
-            color: #8a6cff;
-        }
-
-        .hero p {
+        header p {
             color: #aaa;
             font-size: 18px;
-            margin-bottom: 30px;
         }
 
-        /* SEARCH */
-        .search-box {
-            width: min(600px, 90vw);
-            margin: auto;
-            position: relative;
+        .hero {
+            text-align: center;
+            padding: 45px 20px 25px;
         }
 
-        .search-box input {
-            width: 100%;
-            padding: 18px 25px;
-            border-radius: 50px;
-            border: 1px solid #292d38;
-            outline: none;
-            background: #11131a;
+        .hero h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .search {
+            width: 90%;
+            max-width: 600px;
+            padding: 16px 20px;
+            border-radius: 30px;
+            border: 1px solid #333b4d;
+            background: #111722;
             color: white;
             font-size: 16px;
+            outline: none;
         }
 
-        .search-box input:focus {
-            border-color: #7c5cff;
-            box-shadow: 0 0 20px rgba(124, 92, 255, 0.2);
+        .search:focus {
+            border-color: #8b5cf6;
         }
 
-        /* SECTION */
-        .section {
-            width: 90%;
-            max-width: 1300px;
-            margin: 50px auto;
-        }
-
-        .section-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .section-title h2 {
-            font-size: 28px;
-        }
-
-        .section-title span {
-            color: #888;
-        }
-
-        /* GALLERY */
         .gallery {
+            width: 92%;
+            max-width: 1400px;
+            margin: 35px auto 70px;
+
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
         }
 
         .card {
-            background: #11131a;
-            border: 1px solid #20232d;
-            border-radius: 15px;
+            background: #111722;
+            border: 1px solid #222b3b;
+            border-radius: 16px;
             overflow: hidden;
             transition: 0.3s;
         }
 
         .card:hover {
             transform: translateY(-8px);
-            border-color: #765cff;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .image-container {
-            position: relative;
-            overflow: hidden;
+            border-color: #8b5cf6;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.45);
         }
 
         .card img {
             width: 100%;
-            height: 210px;
+            height: 360px;
             object-fit: cover;
             display: block;
-            transition: 0.5s;
+            transition: 0.4s;
         }
 
         .card:hover img {
-            transform: scale(1.07);
+            transform: scale(1.04);
         }
 
         .card-content {
@@ -169,17 +104,17 @@
         }
 
         .card-content h3 {
-            margin-bottom: 15px;
             font-size: 19px;
+            margin-bottom: 15px;
         }
 
         .download {
-            display: inline-block;
+            display: block;
             width: 100%;
             text-align: center;
             padding: 12px;
             border-radius: 8px;
-            background: #7257ff;
+            background: #7c3aed;
             color: white;
             text-decoration: none;
             font-weight: bold;
@@ -187,38 +122,31 @@
         }
 
         .download:hover {
-            background: #8b75ff;
+            background: #8b5cf6;
         }
 
-        /* FOOTER */
         footer {
             text-align: center;
             padding: 40px 20px;
-            margin-top: 70px;
-            border-top: 1px solid #1d2029;
+            border-top: 1px solid #202838;
             color: #777;
         }
 
         footer span {
-            color: #8a6cff;
+            color: #8b5cf6;
         }
 
-        /* MOBILE */
         @media (max-width: 600px) {
-            nav {
-                padding: 0 5%;
+            header h1 {
+                font-size: 36px;
             }
 
-            nav a {
-                display: none;
+            .card img {
+                height: 430px;
             }
 
-            .hero {
-                min-height: 380px;
-            }
-
-            .section {
-                width: 92%;
+            .gallery {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -226,147 +154,224 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">Wall<span>Pix</span></div>
-
-        <div>
-            <a href="#">Home</a>
-            <a href="#wallpapers">Wallpapers</a>
-            <a href="#about">About</a>
-        </div>
-    </nav>
+    <!-- HEADER -->
+    <header>
+        <h1>WallPix</h1>
+        <p>Free Beautiful Anime Wallpapers</p>
+    </header>
 
 
-    <!-- HERO -->
-    <section class="hero">
+    <!-- SEARCH -->
+    <div class="hero">
+        <h2>Find Your Wallpaper</h2>
 
-        <div>
-            <h1>Beautiful <span>Wallpapers</span></h1>
+        <input
+            type="text"
+            class="search"
+            id="searchBox"
+            placeholder="Search wallpapers..."
+        >
+    </div>
 
-            <p>
-                Download high-quality wallpapers for free.
-            </p>
 
-            <div class="search-box">
-                <input
-                    type="text"
-                    id="search"
-                    placeholder="Search wallpapers..."
+    <!-- WALLPAPER GALLERY -->
+    <div class="gallery" id="gallery">
+
+
+        <!-- OLD SUNG JINWOO -->
+        <div class="card">
+            <img
+                src="sung-jinwoo-dark-3840x2160-25924.jpg"
+                alt="Sung Jinwoo Dark Wallpaper"
+            >
+
+            <div class="card-content">
+                <h3>Sung Jinwoo Dark Wallpaper</h3>
+
+                <a
+                    class="download"
+                    href="sung-jinwoo-dark-3840x2160-25924.jpg"
+                    download
                 >
+                    Download
+                </a>
             </div>
         </div>
 
-    </section>
 
+        <!-- IMAGE 1 -->
+        <div class="card">
+            <img
+                src="IMG_20260206_230107_544.jpg"
+                alt="Anime Wallpaper 1"
+            >
 
-    <!-- WALLPAPERS -->
-    <section class="section" id="wallpapers">
+            <div class="card-content">
+                <h3>Anime Wallpaper 1</h3>
 
-        <div class="section-title">
-            <h2>Latest Wallpapers</h2>
-            <span>Free Download</span>
-        </div>
-
-
-        <div class="gallery" id="gallery">
-
-            <!-- WALLPAPER 1 -->
-            <div class="card" data-name="sung jinwoo solo leveling anime">
-
-                <div class="image-container">
-                    <img
-                        src="sung-jinwoo-dark-3840x2160-25924.jpg"
-                        alt="Sung Jinwoo Wallpaper"
-                    >
-                </div>
-
-                <div class="card-content">
-
-                    <h3>Sung Jinwoo Dark</h3>
-
-                    <a
-                        class="download"
-                        href="sung-jinwoo-dark-3840x2160-25924.jpg"
-                        download
-                    >
-                        ⬇ Download Wallpaper
-                    </a>
-
-                </div>
-
+                <a
+                    class="download"
+                    href="IMG_20260206_230107_544.jpg"
+                    download
+                >
+                    Download
+                </a>
             </div>
+        </div>
 
 
-            <!-- SECOND CARD -->
-            <div class="card" data-name="anime wallpaper">
+        <!-- IMAGE 2 -->
+        <div class="card">
+            <img
+                src="IMG_20260206_230055_354.jpg"
+                alt="Anime Wallpaper 2"
+            >
 
-                <div class="image-container">
-                    <img
-                        src="sung-jinwoo-dark-3840x2160-25924.jpg"
-                        alt="Anime Wallpaper"
-                    >
-                </div>
+            <div class="card-content">
+                <h3>Anime Wallpaper 2</h3>
 
-                <div class="card-content">
-
-                    <h3>Anime Dark Wallpaper</h3>
-
-                    <a
-                        class="download"
-                        href="sung-jinwoo-dark-3840x2160-25924.jpg"
-                        download
-                    >
-                        ⬇ Download Wallpaper
-                    </a>
-
-                </div>
-
+                <a
+                    class="download"
+                    href="IMG_20260206_230055_354.jpg"
+                    download
+                >
+                    Download
+                </a>
             </div>
-
-
         </div>
 
-    </section>
 
+        <!-- IMAGE 3 -->
+        <div class="card">
+            <img
+                src="IMG_20260206_230016_461.jpg"
+                alt="Anime Wallpaper 3"
+            >
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
+            <div class="card-content">
+                <h3>Anime Wallpaper 3</h3>
 
-        <div class="section-title">
-            <h2>About WallPix</h2>
+                <a
+                    class="download"
+                    href="IMG_20260206_230016_461.jpg"
+                    download
+                >
+                    Download
+                </a>
+            </div>
         </div>
 
-        <p style="color:#999; line-height:1.8;">
-            WallPix is a free wallpaper website where you can
-            discover and download beautiful high-quality wallpapers
-            for your desktop and mobile devices.
-        </p>
 
-    </section>
+        <!-- IMAGE 4 -->
+        <div class="card">
+            <img
+                src="IMG_20260206_230035_175.jpg"
+                alt="Anime Wallpaper 4"
+            >
+
+            <div class="card-content">
+                <h3>Anime Wallpaper 4</h3>
+
+                <a
+                    class="download"
+                    href="IMG_20260206_230035_175.jpg"
+                    download
+                >
+                    Download
+                </a>
+            </div>
+        </div>
+
+
+        <!-- IMAGE 5 -->
+        <div class="card">
+            <img
+                src="IMG_20260206_230044_967.jpg"
+                alt="Anime Wallpaper 5"
+            >
+
+            <div class="card-content">
+                <h3>Anime Wallpaper 5</h3>
+
+                <a
+                    class="download"
+                    href="IMG_20260206_230044_967.jpg"
+                    download
+                >
+                    Download
+                </a>
+            </div>
+        </div>
+
+
+        <!-- IMAGE 6 -->
+        <div class="card">
+            <img
+                src="IMG_20260703_110143_299.jpg"
+                alt="Anime Wallpaper 6"
+            >
+
+            <div class="card-content">
+                <h3>Anime Wallpaper 6</h3>
+
+                <a
+                    class="download"
+                    href="IMG_20260703_110143_299.jpg"
+                    download
+                >
+                    Download
+                </a>
+            </div>
+        </div>
+
+
+        <!-- IMAGE 7 -->
+        <div class="card">
+            <img
+                src="IMG_20260703_110138_268.jpg"
+                alt="Anime Wallpaper 7"
+            >
+
+            <div class="card-content">
+                <h3>Anime Wallpaper 7</h3>
+
+                <a
+                    class="download"
+                    href="IMG_20260703_110138_268.jpg"
+                    download
+                >
+                    Download
+                </a>
+            </div>
+        </div>
+
+    </div>
 
 
     <!-- FOOTER -->
     <footer>
-        © 2026 <span>WallPix</span> — Free Wallpapers
+        © 2026 <span>WallPix</span> — Free Anime Wallpapers
     </footer>
 
 
-    <!-- SEARCH SCRIPT -->
+    <!-- SEARCH FUNCTION -->
     <script>
 
-        const search = document.getElementById("search");
+        const searchBox = document.getElementById("searchBox");
         const cards = document.querySelectorAll(".card");
 
-        search.addEventListener("input", function () {
+        searchBox.addEventListener("input", function () {
 
-            const value = search.value.toLowerCase();
+            const searchText = this.value.toLowerCase();
 
-            cards.forEach(card => {
+            cards.forEach(function(card) {
 
-                const name = card.dataset.name.toLowerCase();
+                const title = card
+                    .querySelector("h3")
+                    .innerText
+                    .toLowerCase();
 
-                if (name.includes(value)) {
+                if (title.includes(searchText)) {
                     card.style.display = "block";
                 } else {
                     card.style.display = "none";
